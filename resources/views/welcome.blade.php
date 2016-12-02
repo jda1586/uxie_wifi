@@ -9,6 +9,10 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('css/materialize.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('mdi/css/materialdesignicons.min.css')}}" media="all" rel="stylesheet" type="text/css" />
+
 
         <!-- Styles -->
         <style>
@@ -77,15 +81,29 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><i class="mdi mdi-bell"></i>First</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi mdi-account-box"></i>Second</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi mdi-amazon"></i>Third</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                </ul>
             </div>
         </div>
+
+        <script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/materialize.js')}}"></script>
+        <script>
+            $(document).ready(function(){
+                $('.collapsible').collapsible();
+            });
+        </script>
     </body>
 </html>
