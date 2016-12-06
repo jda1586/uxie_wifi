@@ -11,6 +11,12 @@
 |
 */
 
+/*Route::group(['namespace' => 'web'], function () {
+//    Route::get('/', function () {} );
+    Route::get('/', 'welcomeController@index')->name('index');
+});*/
+
+
 Route::get('/', function () {
     return view('welcome');
 });
