@@ -11,12 +11,18 @@
 |
 */
 
-/*Route::group(['namespace' => 'web'], function () {
+Route::group(['namespace' => 'web'], function () {
 //    Route::get('/', function () {} );
-    Route::get('/', 'welcomeController@index')->name('index');
-});*/
-
-
-Route::get('/', function () {
-    return view('welcome');
+//    Route::get('/', 'welcomeController@index')->name('index');
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    Route::get('/dash', function () {
+        return view('admin.index');
+    });
 });
+
+
+/*Route::get('/', function () {
+    return view('welcome');
+});*/
