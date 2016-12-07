@@ -7688,8 +7688,22 @@ button.close {
   }
 }
 
+body {
+  display: -webkit-box;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+}
+
 .no-margin {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .no-padding {
@@ -7699,6 +7713,29 @@ button.close {
 #welcome_image {
   width: 100%;
   height: 100%;
+}
+
+.line-text {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.line-text span {
+  background: none;
+  padding: 0 10px;
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.top-banner {
+  margin: 0 10px;
 }
 
 /*# sourceMappingURL=app.css.map */
